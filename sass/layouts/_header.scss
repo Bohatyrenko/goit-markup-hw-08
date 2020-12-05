@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 93px;
+  padding-bottom: 28px;
+}
+
+.header-list li:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header-link {
+  color: $main-text-color;
+  font-family: $main-font-family;
+  @include fonts (14px, 500, 1.14, 0.02em);
+  font-style: normal;
+  
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: $nav-button-color;
+  }
+
+}
+
+.header-link-mail {
+  display: inline-flex;
+  align-items: center;
+
+  margin-right: 30px;
+  padding-bottom: 25px;
+  
+  color: $second-text-color;
+  font-family: $main-font-family;
+  @include fonts (14px, 500, 1.14, 0.02em);
+  font-style: normal;
+
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: $nav-button-color;
+  }
+}
+.mail-svg {
+  width: 15px;
+  height: 10px;
+
+  margin-right: 10px;
+  
+  fill: $second-text-color;
+
+  @include transition (fill);
+}
+
+.header-link-mail:hover .mail-svg,
+.header-link-mail:focus .mail-svg {
+  fill: $nav-button-color;
+}
+
+.header-link-phone {
+  display: inline-flex;
+  align-items: center;
+
+  padding-bottom: 25px;
+
+  color: $second-text-color;
+  font-family: $main-font-family;
+  @include fonts (14px, 500, 1.14, 0.02em);
+  font-style: normal;
+
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: $nav-button-color;
+  }
+}
+
+.phone-svg {
+  width: 10px;
+  height: 15px;
+
+  margin-right: 10px;
+
+  fill: $second-text-color;
+  
+  @include transition (fill);
+}
+
+.header-link-phone:hover .phone-svg,
+.header-link-phone:focus .phone-svg {
+  fill: $nav-button-color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navigate {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 48px;
+  position: absolute;
+  
+  right: 0;
+  bottom: -4px;
+  left: 0;
+
+  background-color: $nav-button-color;
+  border-radius: 2px;
+}
+
+.line-portfolio::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 77px;
+  position: absolute;
+  
+  right: 0;
+  bottom: -4px;
+  left: 99px;
+
+  background-color: $nav-button-color;
+  border-radius: 2px;
+}

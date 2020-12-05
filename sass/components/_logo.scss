@@ -1,0 +1,20 @@
+.logo {
+  margin-bottom: 25px;
+  color: $main-text-color;
+  font-family: "Raleway", sans-serif;
+  @include fonts (26px, bold, 1.19, 0.03em);
+}
+
+.web {
+  color: $nav-button-color;
+}
+
+.studio {
+  color: $background-color;
+}
+
+.footer-logo {
+  display: block;
+  
+  margin-bottom: 20px;
+}

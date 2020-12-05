@@ -1,0 +1,38 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-list {
+    display: flex;
+    width: calc((100% - 150px) / 6);
+    height: 90px;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-link {
+    display: inline-block;
+    width: 170px;
+    height: 90px;
+  }
+}
+
+.clients-icons-svg {
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid $svg-color;
+  border-radius: 4px;
+  
+  fill: $svg-color;
+
+  @include transition (fill);
+}
+
+.clients-link:hover .clients-icons-svg, 
+.clients-link:focus .clients-icons-svg {
+  fill: $nav-button-color;
+  border-color: $nav-button-color;
+}

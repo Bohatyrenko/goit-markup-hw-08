@@ -1,0 +1,35 @@
+.work {
+  padding-bottom: 94px;
+}
+
+.work-figure {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+  }
+}
+
+.text-overlap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  color: $background-color;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: $main-font-family;
+  @include fonts (14px, bold, 1.14, 0.03em);
+
+  text-align: center;
+  text-transform: uppercase;
+}

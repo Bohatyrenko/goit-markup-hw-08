@@ -1,0 +1,24 @@
+.button {
+  width: 200px;
+  height: 50px;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+
+  background-color: $nav-button-color;
+  color: $background-color;
+  font-family: $main-font-family;
+  @include fonts (16px, bold, 1.87, 0.06em);
+  
+  align-items: center;
+  text-align: center;
+
+  @include transition (background-color);
+
+  &:focus {
+    background-color: $background-color;
+    color: $nav-button-color;
+    border-color: $nav-button-color;
+  }
+}

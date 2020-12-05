@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font-family;
+  background-color: $background-color;
+  margin: 0px;
+}
+
+header {
+  padding: 25px 0px 0px 0px;
+}
+
+footer {
+  background-color: $second-background-color;
+  padding: 60px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  margin: 0;
+}

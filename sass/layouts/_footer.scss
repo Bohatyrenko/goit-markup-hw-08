@@ -1,0 +1,92 @@
+.footer {
+  padding: 60px 0;
+  justify-content: flex-start;
+
+  background-color: $second-background-color;
+
+
+  &-title {
+    margin-bottom: 20px;
+
+    color: $background-color;
+    font-family: $main-font-family;
+    @include fonts (14px, bold, 1.17, 0.03em);
+    text-transform: uppercase;
+    
+
+  }
+  
+  &-flex {
+    display: flex;
+  }
+}
+
+.address {
+  display: inline-block;
+
+  color: $background-color;
+  font-family: $main-font-family;
+  @include fonts (14px, normal, 1.71, 0.03em);
+  font-style: normal;
+
+  &-link {
+    display: inline-block;
+
+    color: rgba(255, 255, 255, 0.6);
+    font-family: $main-font-family;
+    @include fonts (14px, normal, 1.71, 0.03em);
+    font-style: normal;
+  }
+}
+
+.mail-footer {
+  margin: 9px 0;
+}
+
+.welcome {
+  margin-top: 12px;
+  margin-left: 70px;
+
+}
+
+.footer-social-icons {
+  display: flex;
+  width: calc((100% - 30px) / 4);
+
+  margin-top: 16px;
+  margin-bottom: 30px;
+
+}
+
+.bg-social {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  
+  @include transition (background-color);
+}
+
+.bg-social:hover .social-icons-svg,
+.bg-social:focus .social-icons-svg{
+  fill: $background-color;
+}
+
+.bg-social:hover,
+.bg-social:focus {
+  background-color: $nav-button-color;
+}
+
+.social-footer-svg {
+  width: 20px;
+  height: 20px;
+  
+  fill: $background-color;
+}
+
+
