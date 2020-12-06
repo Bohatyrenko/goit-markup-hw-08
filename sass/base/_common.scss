@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 2px red solid;
 }
 
 h1,
@@ -36,8 +37,7 @@ header {
 
 footer {
   background-color: $second-background-color;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
 a {
@@ -62,4 +62,63 @@ img {
 
 input {
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  align-content: center;
+  vertical-align: baseline;
+
+  @include for-size(mobile) {
+    width: 480px;
+  } 
+
+  @include for-size(tablet) {
+    width: 768px;
+  } 
+
+  @include for-size(desktop) {
+    width: 1200px;
+  } 
+}
+
+.horizont {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  color: $main-text-color;
+  @include fonts (28px, bold, 1.17, 0.03em);
+
+  margin-bottom: 50px;
+
+  @include for-size(desktop) {
+    @include fonts (36px, bold, 1.16, 0.03em);
+  }
 }
