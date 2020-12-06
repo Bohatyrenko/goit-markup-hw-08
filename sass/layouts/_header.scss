@@ -1,12 +1,13 @@
-.header {
-  display: flex;
-  align-items: flex-end;
-}
+// .header {
+//   display: flex;
+//   align-items: flex-end;
+// }
 
 .header-list {
+  display: none;
   position: relative;
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
 
   margin-left: 93px;
   padding-bottom: 28px;
@@ -32,8 +33,9 @@
 }
 
 .header-link-mail {
-  display: inline-flex;
-  align-items: center;
+  display: none;
+  // display: inline-flex;
+  // align-items: center;
 
   margin-right: 30px;
   padding-bottom: 25px;
@@ -67,8 +69,9 @@
 }
 
 .header-link-phone {
-  display: inline-flex;
-  align-items: center;
+  display: none;
+  // display: inline-flex;
+  // align-items: center;
 
   padding-bottom: 25px;
 

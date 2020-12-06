@@ -45,14 +45,13 @@
     <main>
       <!-- Герой -->
       <section class="hero">
-        <div class="center">
-          <h1 class="hero-title">
-            Эффективные решения<br />
-            для вашего бизнеса
-          </h1>
-          <!-- <a class="button" href="">Заказать услугу</a> -->
-          <button class="button" data-modal-open>Заказать услугу</button>
-        </div>
+        <!-- <div class="center"> -->
+        <h1 class="hero-title">
+          Эффективные решения<br />
+          для вашего бизнеса
+        </h1>
+        <button class="button" data-modal-open>Заказать услугу</button>
+        <!-- </div> -->
       </section>
 
       <!-- Модалка -->
@@ -114,11 +113,10 @@
 
       </div>
 
-
       <!-- Особенности -->
-      <section class="container features">
+      <section class="features">
         <h2 class="visually-hidden">Особенности</h2>
-        <ul class="container horizont">
+        <ul class="features-list">
           <li class="features-item antenna">
             <h3 class="features-title">Внимание к деталям</h3>
             <p class="features-description">
@@ -177,12 +175,14 @@
           <h2 class="title center">Наша команда</h2>
           <ul class="horizont">
             <li class="team-item">
-              <img
-                class="team-img"
-                src="./images/colleague1.jpg"
-                alt="colleague1"
-                width="270"
-              />
+              <div class="thumb">
+                <img
+                  class="team-img"
+                  src="./images/new-photo/stuff1-450.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                />
+              </div>
               <h3 class="team-name">Игорь Демьяненко</h3>
               <p class="team-position">Product Designer</p>
               <ul class="list-social-icons">
@@ -219,9 +219,9 @@
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/colleague2.jpg"
-                alt="colleague2"
-                width="270"
+                src="./images/new-photo/stuff2-450.jpg"
+                alt="Ольга Репина"
+                width="450"
               />
               <h3 class="team-name">Ольга Репина</h3>
               <p class="team-position">Frontend Developer</p>
@@ -259,9 +259,9 @@
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/colleague3.jpg"
-                alt="colleague3"
-                width="270"
+                src="./images/new-photo/stuff3-450.jpg"
+                alt="Николай Тарасов"
+                width="450"
               />
               <h3 class="team-name">Николай Тарасов</h3>
               <p class="team-position">Marketing</p>
@@ -299,9 +299,9 @@
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/colleague4.jpg"
-                alt="colleague4"
-                width="270"
+                src="./images/new-photo/stuff4-450.jpg"
+                alt="Михаил Ермаков"
+                width="450"
               />
               <h3 class="team-name">Михаил Ермаков</h3>
               <p class="team-position">UI Designer</p>
@@ -383,7 +383,7 @@
     <!-- Футер -->
     <footer>
       <div class="container footer-flex">
-        <section>
+        <section class="footer-info">
           <a class="logo footer-logo" href="./index.html"
             ><span class="web">Web</span><span class="studio">Studio</span></a
           >
@@ -438,7 +438,6 @@
           </button>
         </div>
       </div>
-      
     </footer>
     <script src="./modal.js"></script>
   </body>

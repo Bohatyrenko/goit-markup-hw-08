@@ -10,21 +10,20 @@
 }
 
 .container {
-  width: 1200px;
-
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
+  width: 480px;
+  
   align-content: center;
   vertical-align: baseline;
+
+  // @media scrin and (min-width: 768px) {
+  //   width: 768px
+  // }
 }
 
-.horizont {
-  display: flex;
-  justify-content: space-between;
-}
+// .horizont {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 .center {
   text-align: center;
@@ -32,7 +31,7 @@
 
 .title {
   color: $main-text-color;
-  @include fonts (36px, bold, 1.16, 0.03em);
+  @include fonts (28px, bold, 1.17, 0.03em);
 
-  margin-bottom: 50px;
+  padding-bottom: 30px;
 }

@@ -1,12 +1,32 @@
 .features {
-  padding: 94px 0;
+  width: 450px;
+  
+  // align-content: center;
+  // vertical-align: baseline;
+
+  padding: 30px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+ 
+  // @media scrin and (min-width: 768px) {
+  //   display: inline-block;
+  // }
+
+  &-list {
+    width: 480px;
+  
+    align-content: center;
+    vertical-align: baseline;
+  
+  }
 
   &-title {
     margin-bottom: 10px;
     margin-top: 30px;
+    text-align: center;
 
     color: $main-text-color;
-    @include fonts (14px, bold, 1.4, 0.03em);
+    @include fonts (14px, bold, 1.14, 0.03em);
     text-transform: uppercase;
   }
 
@@ -14,24 +34,25 @@
     margin-bottom: 0;
 
     color: $second-text-color;
-    @include fonts (14px, normal, 1.7, 0.03em);
+    @include fonts (14px, normal, 1.71, 0.03em);
   }
 
-  &-item {
-    width: calc((100% - 90px) / 4);
+  // &-item {
+  //   @media scrin and (min-width: 768px) {
+  //     display: inline-block;
+  //     width: calc((100% - 60px) / 2);
+  //     margin-right: 30px;
+  //   }
+  // }
 
-    margin-right: 30px;
-  }
-
-  &-item:last-child {
-    margin-right: 0px;
-  }
 }
 
 .antenna::before {
   content: "";
   display: block;
   height: 120px;
+  width: 450px;
+  margin-top: 30px;
   background-color: #f5f4fa;
   background-image: url(../images/icon/antenna.svg);
   background-repeat: no-repeat;
@@ -42,6 +63,8 @@
   content: "";
   display: block;
   height: 120px;
+  width: 450px;
+  margin-top: 30px;
   background-color: #f5f4fa;
   background-image: url(../images/icon/clock.svg);
   background-repeat: no-repeat;
@@ -52,6 +75,8 @@
   content: "";
   display: block;
   height: 120px;
+  width: 450px;
+  margin-top: 30px;
   background-color: #f5f4fa;
   background-image: url(../images/icon/diagram.svg);
   background-repeat: no-repeat;
@@ -62,6 +87,8 @@
   content: "";
   display: block;
   height: 120px;
+  width: 450px;
+  margin-top: 30px;
   background-color: #f5f4fa;
   background-image: url(../images/icon/astronaut.svg);
   background-repeat: no-repeat;
