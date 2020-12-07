@@ -115,7 +115,7 @@ input {
   color: $main-text-color;
   @include fonts (28px, bold, 1.17, 0.03em);
 
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   @include for-size(desktop) {
     @include fonts (36px, bold, 1.16, 0.03em);
