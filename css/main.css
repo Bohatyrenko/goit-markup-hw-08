@@ -613,12 +613,21 @@ input {
 @media (min-width: 768px) {
   .heder-container {
     width: 768px;
+    justify-content: start;
   }
 }
 
 @media (min-width: 1200px) {
   .heder-container {
     width: 1600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .heder-horizont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
   }
 }
 
@@ -638,6 +647,7 @@ input {
 @media (min-width: 768px) {
   .header-list {
     margin-top: 32px;
+    margin-left: 83px;
   }
 }
 
@@ -674,9 +684,9 @@ input {
   align-items: center;
   color: #757575;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   font-style: normal;
   transition-property: color;
@@ -695,6 +705,10 @@ input {
   .header-link-mail {
     margin-right: 30px;
     padding-bottom: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -723,9 +737,9 @@ input {
   padding-bottom: 25px;
   color: #757575;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   font-style: normal;
   transition-property: color;
@@ -744,6 +758,10 @@ input {
   .header-link-phone {
     margin-right: 0px;
     padding-bottom: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -783,6 +801,7 @@ input {
     flex-direction: column;
     align-items: unset;
     padding: 21px 0px;
+    margin-left: 76px;
   }
 }
 
