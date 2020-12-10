@@ -197,6 +197,7 @@ input {
   height: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -209,10 +210,19 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
-  padding: 38px;
+  width: 450px;
+  height: 609px;
+  padding: 40px;
+  margin: 93px 0px;
   background-color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+    padding: 38px;
+  }
 }
 
 .modal p {
@@ -220,11 +230,20 @@ input {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   align-items: center;
   text-align: center;
   margin-bottom: 12px;
+}
+
+@media (min-width: 1200px) {
+  .modal p {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal label {
@@ -279,7 +298,7 @@ input {
 }
 
 .form-input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding: 14px 15px 14px 42px;
   border: 1px solid rgba(33, 33, 255, 0.2);
@@ -288,6 +307,12 @@ input {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1200px) {
+  .form-input {
+    width: 448px;
+  }
 }
 
 .form-input:focus {
@@ -317,7 +342,7 @@ input {
 }
 
 .form-textarea {
-  width: 448px;
+  width: 370px;
   height: 120px;
   border: 1px solid rgba(33, 33, 255, 0.2);
   border-radius: 4px;
@@ -335,6 +360,12 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-width: 1200px) {
+  .form-textarea {
+    width: 448px;
+  }
+}
+
 .form-textarea::placeholder {
   color: rgba(117, 117, 177, 0.5);
   font-family: "Roboto", sans-serif;
@@ -349,8 +380,13 @@ input {
 }
 
 .form-checkbox {
-  padding-left: 14px;
   padding-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .form-checkbox {
+    padding-left: 14px;
+  }
 }
 
 .form-checkbox a {
@@ -361,10 +397,19 @@ input {
 .form-checkbox label {
   color: #757575;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 0.14;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .form-checkbox label {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 0.14;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-button {
