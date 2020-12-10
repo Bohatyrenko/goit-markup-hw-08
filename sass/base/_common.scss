@@ -74,6 +74,14 @@ input {
   overflow: hidden;
 }
 
+.main-container {
+  @include for-size(desktop) {
+    width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .container {
   width: 100%;
 
