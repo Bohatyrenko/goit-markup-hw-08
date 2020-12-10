@@ -681,10 +681,53 @@ input {
 }
 
 .hero {
-  background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 200px 0;
+  width: 480px;
+  height: 400px;
+  background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/new-photo/hero-bg-480.jpg);
+  background-size: 480px 400px;
+  padding: 118px 60px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(/images/new-photo/hero-bg-480@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    width: 768px;
+    height: 400px;
+    background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/new-photo/hero-bg-768.jpg);
+    background-size: 768px 400px;
+    padding: 118px 204px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(/images/new-photo/hero-bg-768@2x.jpg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    height: 600px;
+    background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/new-photo/hero-bg-1600.jpg);
+    background-size: 1600px 600px;
+    padding: 200px 452px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(/images/new-photo/hero-bg-1600@2x.jpg);
+  }
+}
+
+.hero-center {
+  text-align: center;
 }
 
 .hero-title {
@@ -1137,8 +1180,7 @@ input {
 
 /* Main */
 .portfolio-padding {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding: 60px 15px;
 }
 
 .button-filter {
@@ -1165,26 +1207,56 @@ input {
 }
 
 .filter {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .filter {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .filter-item {
+  display: inline-block;
   margin-right: 8px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .filter-item {
+    display: flex;
+  }
 }
 
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .portfolio-item {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .portfolio-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio-bottom {
