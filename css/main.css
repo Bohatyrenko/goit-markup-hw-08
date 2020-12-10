@@ -838,6 +838,20 @@ input {
   border-radius: 2px;
 }
 
+.mobile-svg-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin: 10px 15px;
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-svg-btn {
+    display: block;
+  }
+}
+
 .hero {
   width: 480px;
   height: 400px;
