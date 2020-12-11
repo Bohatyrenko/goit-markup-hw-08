@@ -4,7 +4,7 @@
 
   &-email {
     height: 50px;
-    width: 450px;
+    max-width: 450px;
 
     padding: 15px 16px;
     margin-bottom: 20px;
@@ -16,19 +16,19 @@
     background-color: $second-background-color;
     color: rgba(255, 255, 255, 0.6);
     font-family: $main-font-family;
-    @include fonts (16px, normal, 1.25, 0.03em);
+    @include fonts(16px, normal, 1.25, 0.03em);
 
     @include for-size(tablet) {
       display: block;
       margin-right: auto;
       margin-left: auto;
-    } 
+    }
 
     @include for-size(desktop) {
       display: inline-block;
       width: 358px;
       margin-right: 12px;
-    } 
+    }
   }
 }
 
@@ -46,9 +46,9 @@
   background-color: $nav-button-color;
   color: $background-color;
   font-family: $main-font-family;
-  @include fonts (16px, bold, 1.87, 0.06em);
-  
-  @include transition (background-color);
+  @include fonts(16px, bold, 1.87, 0.06em);
+
+  @include transition(background-color);
 
   &:focus {
     background-color: $background-color;
@@ -62,7 +62,7 @@
   vertical-align: middle;
 
   margin-left: 10px;
-  
+
   fill: $background-color;
 }
 
