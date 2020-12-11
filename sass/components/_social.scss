@@ -17,7 +17,7 @@
 
   background-color: $background-color;
 
-  @include transition (background-color);
+  @include transition(background-color);
 
   &:hover,
   &:focus {
@@ -32,10 +32,10 @@
 .social-icons-svg {
   width: 20px;
   height: 20px;
-  
-  color: $svg-color;
 
-  @include transition (fill);
+  fill: $svg-color;
+
+  @include transition(fill);
 }
 
 .social-icons-link:hover .social-icons-svg,
