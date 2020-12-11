@@ -2,19 +2,17 @@
 //   @include for-size(desktop) {
 //     background-color: $third-background-color;
 //   }
-// }  
-
+// }
 
 .team {
   width: 100%;
 
-  padding: 60px 15px;
+  padding: 60px 15px 30px 15px;
   margin-right: auto;
   margin-left: auto;
 
   align-content: center;
   vertical-align: baseline;
-
 
   background-color: $third-background-color;
 
@@ -26,8 +24,8 @@
     margin-bottom: 10px;
 
     color: $main-text-color;
-    @include fonts (16px, 500, 1.18, 0.03em);
-    
+    @include fonts(16px, 500, 1.18, 0.03em);
+
     text-align: center;
   }
 
@@ -35,7 +33,7 @@
     margin-bottom: 16px;
 
     color: $second-text-color;
-    @include fonts (16px, normal, 1.18, 0.03em);
+    @include fonts(16px, normal, 1.18, 0.03em);
 
     text-align: center;
   }
@@ -45,6 +43,7 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
 
     // &:not(:last-child) {
     //   margin-bottom: 30px;
@@ -63,7 +62,7 @@
         margin-bottom: 30px;
       }
     }
-  
+
     // @media screen and (max-width: 1199px) {
     //   &:first-child {
     //     margin-bottom: 30px;
