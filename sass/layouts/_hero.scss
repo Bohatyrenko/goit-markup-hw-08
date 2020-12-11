@@ -1,54 +1,64 @@
 .hero {
-  // background-image: radial-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
-  // background-repeat: no-repeat;
-  // background-position: center;
-  
-  
-  width: 480px;
+  max-width: 480px;
   height: 400px;
-  background-image: radial-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-480.jpg);
+  background-image: radial-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/new-photo/hero-bg-480.jpg);
+
   background-size: 480px 400px;
 
   padding: 118px 60px;
+  margin-right: auto;
+  margin-left: auto;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (-webkit-min-device-pixel-ratio: 2),
     screen and (-o-min-device-pixel-ratio: 2/1),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-      background-image: url(../images/new-photo/hero-bg-480@2x.jpg);
+    background-image: url(../images/new-photo/hero-bg-480@2x.jpg);
   }
 
   @include for-size(tablet) {
-    width: 768px;
+    max-width: 768px;
     height: 400px;
-    background-image: radial-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-768.jpg);
+    background-image: radial-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/new-photo/hero-bg-768.jpg);
     background-size: 768px 400px;
 
     padding: 118px 204px;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (-o-min-device-pixel-ratio: 2/1),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/new-photo/hero-bg-768@2x.jpg);
     }
   }
 
   @include for-size(desktop) {
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
-    background-image: radial-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-1600.jpg);
+    background-image: radial-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/new-photo/hero-bg-1600.jpg);
     background-size: 1600px 600px;
 
     padding: 200px 452px;
 
     @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (-o-min-device-pixel-ratio: 2/1),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/new-photo/hero-bg-1600@2x.jpg);
     }
   }
@@ -62,13 +72,13 @@
 
     color: $background-color;
     font-family: $main-font-family;
-    @include fonts (26px, 900, 1.61, 0.06em);
-    
+    @include fonts(26px, 900, 1.61, 0.06em);
+
     text-align: center;
     text-transform: uppercase;
 
-    @include for-size (desktop) {
-      @include fonts (44px, 900, 1.61, 0.06em);
+    @include for-size(desktop) {
+      @include fonts(44px, 900, 1.61, 0.06em);
     }
   }
 }
