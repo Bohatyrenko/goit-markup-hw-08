@@ -6,7 +6,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 2px red solid;
 }
 
 h1,
@@ -95,15 +94,15 @@ input {
 
   @include for-size(mobile) {
     width: 480px;
-  } 
+  }
 
   @include for-size(tablet) {
     width: 768px;
-  } 
+  }
 
   @include for-size(desktop) {
     width: 1200px;
-  } 
+  }
 }
 
 .horizont {
@@ -120,11 +119,11 @@ input {
 
 .title {
   color: $main-text-color;
-  @include fonts (28px, bold, 1.17, 0.03em);
+  @include fonts(28px, bold, 1.17, 0.03em);
 
   margin-bottom: 30px;
 
   @include for-size(desktop) {
-    @include fonts (36px, bold, 1.16, 0.03em);
+    @include fonts(36px, bold, 1.16, 0.03em);
   }
 }
