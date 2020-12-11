@@ -596,6 +596,10 @@ input {
   align-items: flex-end;
 }
 
+.header-line {
+  border-bottom: 1px solid #ececec;
+}
+
 .heder-container {
   width: 480px;
   margin-right: auto;
@@ -615,12 +619,12 @@ input {
   }
 }
 
-.heder-horizont {
+.header-horizont {
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .heder-horizont {
+  .header-horizont {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -628,13 +632,13 @@ input {
 }
 
 @media (min-width: 1200px) {
-  .heder-horizont {
+  .header-horizont {
     justify-content: space-between;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .heder-logo {
+  .header-logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -642,7 +646,7 @@ input {
 }
 
 @media (min-width: 768px) {
-  .heder-logo {
+  .header-logo {
     margin: 26px 0px;
   }
 }
@@ -1331,6 +1335,9 @@ input {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
