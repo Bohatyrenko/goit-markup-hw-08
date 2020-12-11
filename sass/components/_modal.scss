@@ -4,22 +4,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
   
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
+  // min-width: 528px;
+  // min-height: 581px;
 
-  padding: 38px;
+  padding: 40px;
+  margin: 93px 0px;
 
   background-color: $background-color;
+
+  @include for-size(desktop) {
+    min-width: 528px;
+    min-height: 581px;
+
+    padding: 38px;
+  }
 
   & p {
     color: #212121;
     font-family: $main-font-family;
-    @include fonts (20px, bold, 1.15, 0.03em);
+    @include fonts (20px, bold, 1.5, 0.03em);
 
     align-items: center;
     text-align: center;
 
     margin-bottom: 12px;
+
+    @include for-size(desktop) {
+      @include fonts (20px, bold, 1.15, 0.03em);
+    }
   }
   
   & label {
@@ -79,9 +93,13 @@
 } 
 
 .form-input {
-  width: 448px;
+  width: 370px;
   height: 40px;
 
+  @include for-size(desktop) {
+    width: 448px;
+  }
+  
   padding: 14px 15px 14px 42px;
 
   border: 1px solid rgba(33, 33, 333, 0.2);
@@ -118,9 +136,13 @@
 }
 
 .form-textarea {
-  width: 448px;
+  width: 370px;
   height: 120px;
 
+  @include for-size(desktop) {
+    width: 448px;
+  }
+  
   border: 1px solid rgba(33, 33, 333, 0.2);
   border-radius: 4px;
   outline: none;
@@ -145,8 +167,12 @@
   }
 }
 .form-checkbox {
-  padding-left: 14px;
   padding-bottom: 30px;
+
+  @include for-size(desktop) {
+    padding-left: 14px;
+  }
+
 
   & a {
     text-decoration: underline;
@@ -156,8 +182,12 @@
   & label {
     color: #757575;
     font-family: $main-font-family;
-    @include fonts (14px, normal, 0.14, 0.03em);
-  }
+    @include fonts (12px, normal, 0.14, 0.03em);
+
+    @include for-size(desktop) {
+      @include fonts (14px, normal, 0.14, 0.03em);
+    }
+  }  
 }
 
 .modal-button {

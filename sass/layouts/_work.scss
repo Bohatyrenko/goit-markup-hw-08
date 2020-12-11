@@ -1,6 +1,10 @@
 .work {
   display: none;
   padding-bottom: 94px;
+
+  @include for-size(desktop) {
+    display: block;
+  }
 }
 
 .work-figure {

@@ -1,8 +1,26 @@
+// .team-color {
+//   @include for-size(desktop) {
+//     background-color: $third-background-color;
+//   }
+// }  
+
+
 .team {
-  // padding-top: 94px;
-  // padding-bottom: 94px;
+  width: 100%;
+
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  align-content: center;
+  vertical-align: baseline;
+
 
   background-color: $third-background-color;
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
 
   &-name {
     margin-bottom: 10px;
@@ -23,24 +41,37 @@
   }
 
   &-item {
-    padding-bottom: 24px;
-
-    &:not(:last-child) {
-      margin-bottom: 60px;
-    }
-
     background: $background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    // &:not(:last-child) {
+    //   margin-bottom: 30px;
+    // }
+
+    @include for-size(tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 90px) / 4);
+    }
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  
+    // @media screen and (max-width: 1199px) {
+    //   &:first-child {
+    //     margin-bottom: 30px;
+    //   }
+    // }
   }
 
   &-img {
     margin-bottom: 30px;
   }
-}
-
-.thumb {
-  max-width: 480px;
-  margin: 0 auto;
 }

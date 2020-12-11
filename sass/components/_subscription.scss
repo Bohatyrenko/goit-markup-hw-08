@@ -1,34 +1,42 @@
 .subscription {
-  width: 100%;
-  margin-top: 60px;
+  margin-top: 12px;
+  margin-left: auto;
 
-  align-items: center;
-  text-align: center;
-}
+  &-email {
+    height: 50px;
+    width: 450px;
 
-.subscription-email {
-  height: 50px;
-  width: 450px;
+    padding: 15px 16px;
+    margin-bottom: 20px;
 
-  padding: 15px 16px;
-  margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
 
+    background-color: $second-background-color;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: $main-font-family;
+    @include fonts (16px, normal, 1.25, 0.03em);
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  outline: none;
+    @include for-size(tablet) {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    } 
 
-  background-color: $second-background-color;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: $main-font-family;
-  @include fonts (16px, normal, 1.25, 0.03em);
+    @include for-size(desktop) {
+      display: inline-block;
+      width: 358px;
+      margin-right: 12px;
+    } 
+  }
 }
 
 .footer-button {
   width: 200px;
   height: 50px;
 
-  // align-items: center;
+  align-items: center;
   text-align: center;
 
   border: 1px solid transparent;

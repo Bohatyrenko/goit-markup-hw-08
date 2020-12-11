@@ -1,13 +1,9 @@
-.social {
-  padding: 60px 15px;
-}
-
 .list-social-icons {
   display: flex;
   justify-content: center;
-  // width: calc((100% - 30px) / 4);
+  align-items: center;
 
-
+  padding-bottom: 24px;
 }
 
 .social-icons-link {
@@ -37,7 +33,7 @@
   width: 20px;
   height: 20px;
   
-  fill: $svg-color;
+  color: $svg-color;
 
   @include transition (fill);
 }

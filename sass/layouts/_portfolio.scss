@@ -5,11 +5,27 @@
 /* Main */
 
 .portfolio-padding {
-  padding: 60px 15px;
+  width: 480px;
+  padding: 60px 15px 30px 15px;
+  align-items: center;
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+    margin-left: 200px;
+  }
 }
 
+.portfolio-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
 .button-filter {
-  // display: inline-block;
+  display: inline-block;
 
   padding: 6px 22px;
 
@@ -32,37 +48,60 @@
 }
 
 .filter {
-  display: inline-block;
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: center;
+  } 
+  // display: flex;
   // justify-content: center;
   // flex-direction: row;
 
-  // margin-bottom: 50px;
+
+
+  margin-bottom: 25px;
 
   &-item {
     display: inline-block;
     margin-right: 8px;
     margin-bottom: 15px;
 
-    &:last-child {
-      margin-bottom: 40px;
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
+
+    @include for-size(tablet) {
+      display: flex;
+    } 
   }
 }
 
 .portfolio {
-  display: inline-block;
-  // flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } 
 
   &-item {
     background-color: $background-color;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
+
+    @include for-size(tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 60px) / 3);
+    }
   }
 
   &-bottom {
     margin-bottom: 30px;
-    margin-right: 0px;
   }
 
   &-link {

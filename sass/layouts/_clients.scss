@@ -1,44 +1,67 @@
 .clients {
-  width: 480px;
-  // display: inline-block;
-  padding-top: 60px;
-  padding-bottom: 30px;
+  width: 100%;
 
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    // width: calc((100% - (30px*2)) / 2);
-    // height: 90px;
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
 
-    margin-right: -15px;
-    margin-left: 15px;
+  align-content: center;
+  vertical-align: baseline;
 
-    li {
-      display: inline-block;
-      margin-right: 30px;
-      margin-bottom: 30px;
-
-      justify-content: space-around;
-      flex-wrap: wrap;
-
-    }
+  @include for-size(desktop) {
+    width: 1200px;
   }
 
-  // &-item {
-  //   display: inline-block;
+  &-item {
+    height: 90px;
 
+    @include for-size(mobile) {
+      width: calc((100% - 30px) / 2);
+    }
 
+    @include for-size(tablet) {
+      width: calc((100% - 60px) / 3);
+    }
 
-  //   &:not(:last-child) {
+    @include for-size(desktop) {
+      width: calc((100% - 150px) / 6);
+    }
 
-  //   }
-  // }
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   
+    @media screen and (max-width: 1199px) {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
 
   &-link {
     display: inline-block;
     width: 210px;
     height: 90px;
+
+    @include for-size(tablet) {
+      width: 226px;
+      height: 90px;
+    }
+  
+    @include for-size(desktop) {
+      width: 170px;
+      height: 90px;
+    }
+  }
+}
+
+.horizont-clients {
+  @include for-size(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -52,6 +75,16 @@
   fill: $svg-color;
 
   @include transition (fill);
+
+  @include for-size(tablet) {
+    width: 226px;
+    height: 90px;
+  }
+
+  @include for-size(desktop) {
+    width: 170px;
+    height: 90px;
+  }
 }
 
 .clients-link:hover .clients-icons-svg, 

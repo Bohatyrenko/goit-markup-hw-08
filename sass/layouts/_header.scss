@@ -1,16 +1,78 @@
-// .header {
-//   display: flex;
-//   align-items: flex-end;
-// }
+.header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.heder-container {
+  width: 480px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  @include for-size(tablet) {
+    width: 768px;
+    justify-content: start;
+
+  }
+
+  @include for-size(desktop) {
+    width: 1600px;
+  }
+}
+
+.heder-horizont {
+  position: relative;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  @include for-size(desktop) {
+    justify-content: space-between;
+  }
+}
+
+.heder-logo {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @include for-size(tablet) {
+    margin: 26px 0px;
+  }
+}
+
+.heder-nav {
+  display: inline-block;
+  justify-content: space-between;
+}
 
 .header-list {
-  display: none;
   position: relative;
-  // display: flex;
-  // flex-direction: row;
+  display: none;
+  flex-direction: row;
 
   margin-left: 93px;
   padding-bottom: 28px;
+
+
+  @include for-size(tablet) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 32px;
+    margin-left: 83px;
+  }
+
+  @include for-size(desktop) {
+    padding: 32px 0px;
+    margin: 0px;
+    justify-content: space-between;
+  }
 }
 
 .header-list li:not(:first-child) {
@@ -33,19 +95,28 @@
 }
 
 .header-link-mail {
-  display: none;
-  // display: inline-flex;
-  // align-items: center;
+  display: inline-flex;
+  align-items: center;
 
-  margin-right: 30px;
-  padding-bottom: 25px;
-  
   color: $second-text-color;
   font-family: $main-font-family;
-  @include fonts (14px, 500, 1.14, 0.02em);
+  @include fonts (12px, 500, 1.16, 0.02em);
   font-style: normal;
 
   @include transition (color);
+
+  @include for-size(tablet) {
+    margin-right: unset;
+    padding-bottom: 10px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 30px;
+    padding-bottom: 0px;
+    @include fonts (14px, 500, 1.14, 0.02em);
+  }
+
+
 
   &:hover,
   &:focus {
@@ -69,18 +140,28 @@
 }
 
 .header-link-phone {
-  display: none;
-  // display: inline-flex;
-  // align-items: center;
+  display: inline-flex;
+  align-items: center;
 
   padding-bottom: 25px;
 
   color: $second-text-color;
   font-family: $main-font-family;
-  @include fonts (14px, 500, 1.14, 0.02em);
+  @include fonts (12px, 500, 1.16, 0.02em);
   font-style: normal;
 
   @include transition (color);
+
+  @include for-size(tablet) {
+    margin-right: unset;
+    padding-bottom: unset;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 0px;
+    padding-bottom: 0px;
+    @include fonts (14px, 500, 1.14, 0.02em);
+  }
 
   &:hover,
   &:focus {
@@ -104,25 +185,36 @@
   fill: $nav-button-color;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navigate {
   justify-content: space-between;
   align-items: center;
+}
+
+.address-navigate {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    padding: 21px 0px;
+    margin-left: 76px;
+  } 
+
+  @include for-size(desktop) {
+    flex-direction: unset;
+    padding: 32px 0px;
+    margin: 0;
+  } 
+  //   @include for-size(tablet) {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     justify-content: space-between;
+      
+  //   }
 }
 
 .line::after {
@@ -133,11 +225,16 @@
   position: absolute;
   
   right: 0;
-  bottom: -4px;
+  bottom: 0px;
   left: 0;
 
   background-color: $nav-button-color;
   border-radius: 2px;
+
+  @media screen and (max-width: 767px) {
+    bottom: 95px;
+    left: 216px;
+  }
 }
 
 .line-portfolio::after {
@@ -148,8 +245,213 @@
   position: absolute;
   
   right: 0;
-  bottom: -4px;
+  bottom: 0px;
   left: 99px;
+
+  background-color: $nav-button-color;
+  border-radius: 2px;
+}
+
+// Mobile menu
+
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+
+  // opacity: 0;
+  // visibility: hidden;
+
+  background-color: white;
+  // border-bottom: 1px solid #ECECEC;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    
+  z-index: 80;
+
+  &.is-open {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+    
+  }
+}
+
+.mobile-menu.is--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  margin: 10px 0px;
+  border: none;
+  background-color: transparent;
+
+
+
+  @media screen and (max-width: 767px) {
+    display: inline-flex;
+  }
+}
+
+.mobile-menu-btn .mobile-icon-cross {
+  display: none;
+}
+
+.mobile-menu-btn.is-open .mobile-icon-cross {
+  display: block;
+}
+
+.mobile-menu-btn.is-open .mobile-icon-menu {
+  display: none;
+}
+
+.mobile-svg-btn {
+  // width: 40px;
+  // height: 40px;
+
+  fill: $main-text-color;
+  @include transition (fill);
+}
+
+
+.mobile-menu-btn:hover .mobile-icon-menu,
+.mobile-menu-btn:focus .mobile-icon-menu {
+  fill: $nav-button-color;
+}
+
+.mobile-menu-btn:hover .mobile-icon-cross,
+.mobile-menu-btn:focus .mobile-icon-cross {
+  fill: $nav-button-color;
+}
+
+.mobile-menu-list {
+  position: relative;
+
+  text-align: center;
+
+  // border-top: 1px solid #ECECEC;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    margin-left: 93px;
+    padding-bottom: 28px;
+  }
+}
+
+.mobile-menu-link {
+  color: $main-text-color;
+  font-family: $main-font-family;
+  @include fonts (14px, 500, 1.14, 0.02em);
+  font-style: normal;
+  
+  @include transition (color);
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $nav-button-color;
+  }
+}
+
+.mobile-menu-address {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin-top: 60px;
+}
+
+.mobile-link-mail {
+  display: inline-flex;
+  align-items: center;
+
+  color: $second-text-color;
+  font-family: $main-font-family;
+  @include fonts (12px, 500, 1.16, 0.02em);
+  font-style: normal;
+
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: $nav-button-color;
+  }
+}
+
+.mobile-link-mail:hover .mail-svg,
+.mobile-link-mail:focus .mail-svg {
+  fill: $nav-button-color;
+}
+
+.mobile-link-phone {
+  display: inline-flex;
+  align-items: center;
+
+  padding-top: 16px;
+
+  color: $second-text-color;
+  font-family: $main-font-family;
+  @include fonts (12px, 500, 1.16, 0.02em);
+  font-style: normal;
+
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: $nav-button-color;
+  }
+}
+
+.mobile-link-phone:hover .phone-svg,
+.mobile-link-phone:focus .phone-svg {
+  fill: $nav-button-color;
+}
+
+.mobile-line::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 48px;
+  position: absolute;
+  
+  right: 0;
+  bottom: 0px;
+  left: 0;
+
+  background-color: $nav-button-color;
+  border-radius: 2px;
+
+  @media screen and (max-width: 767px) {
+    bottom: 75%;
+    left: 44%;
+  }
+}
+
+.mobile-line-portfolio::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 77px;
+  position: absolute;
+  
+  // right: 0;
+  bottom: 30%;
+  left: 40%;
 
   background-color: $nav-button-color;
   border-radius: 2px;
