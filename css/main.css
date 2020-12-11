@@ -616,6 +616,10 @@ input {
   }
 }
 
+.heder-horizont {
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .heder-horizont {
     display: flex;
@@ -867,13 +871,16 @@ input {
 .mobile-menu {
   position: absolute;
   left: 0;
-  right: 0;
+  width: 100%;
   padding: 60px;
-  opacity: 0;
-  visibility: hidden;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   z-index: 80;
+}
+
+.mobile-menu.is-open {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -893,23 +900,43 @@ input {
   height: 40px;
   padding: 0;
   margin: 10px 0px;
-  background-color: white;
   border: none;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {
   .mobile-menu-btn {
-    display: inline-block;
+    display: inline-flex;
   }
 }
 
-.mobile-svg-btn {
-  width: 40px;
-  height: 40px;
+.mobile-menu-btn .mobile-icon-cross {
+  display: none;
 }
 
-.mobile-menu-btn.is--open {
-  background-color: tomato;
+.mobile-menu-btn.is-open .mobile-icon-cross {
+  display: block;
+}
+
+.mobile-menu-btn.is-open .mobile-icon-menu {
+  display: none;
+}
+
+.mobile-svg-btn {
+  fill: #212121;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-btn:hover .mobile-icon-menu,
+.mobile-menu-btn:focus .mobile-icon-menu {
+  fill: #2196f3;
+}
+
+.mobile-menu-btn:hover .mobile-icon-cross,
+.mobile-menu-btn:focus .mobile-icon-cross {
+  fill: #2196f3;
 }
 
 .mobile-menu-list {
@@ -1562,7 +1589,27 @@ footer {
 
 /* Main */
 .portfolio-padding {
+  width: 480px;
   padding: 60px 15px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .portfolio-padding {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-padding {
+    width: 1200px;
+  }
+}
+
+.portfolio-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .button-filter {
@@ -1603,6 +1650,12 @@ footer {
   display: inline-block;
   margin-right: 8px;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: 768px) {
