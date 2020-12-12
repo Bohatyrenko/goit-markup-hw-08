@@ -1524,6 +1524,7 @@ footer {
   .footer {
     display: flex;
     text-align: start;
+    width: 1200px;
   }
 }
 

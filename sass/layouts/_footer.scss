@@ -25,7 +25,7 @@ footer {
   @include for-size(desktop) {
     display: flex;
     text-align: start;
-    // width: 1200px;
+    width: 1200px;
   }
 
   &-title {
