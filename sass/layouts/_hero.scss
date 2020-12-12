@@ -9,16 +9,19 @@
 
   background-size: 480px 400px;
 
-  padding: 118px 60px;
   margin-right: auto;
   margin-left: auto;
 
-  @media screen and (min-device-pixel-ratio: 2),
+  @media not all,
     screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (-o-min-device-pixel-ratio: 2/1),
+    not all,
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url(../images/new-photo/hero-bg-480@2x.jpg);
+    background-image: radial-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/new-photo/hero-bg-480@2x.jpg);
   }
 
   @include for-size(tablet) {
@@ -31,14 +34,16 @@
       url(../images/new-photo/hero-bg-768.jpg);
     background-size: 768px 400px;
 
-    padding: 118px 204px;
-
-    @media screen and (min-device-pixel-ratio: 2),
+    @media not all,
       screen and (-webkit-min-device-pixel-ratio: 2),
-      screen and (-o-min-device-pixel-ratio: 2/1),
+      not all,
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/new-photo/hero-bg-768@2x.jpg);
+      background-image: radial-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/new-photo/hero-bg-768@2x.jpg);
     }
   }
 
@@ -52,14 +57,16 @@
       url(../images/new-photo/hero-bg-1600.jpg);
     background-size: 1600px 600px;
 
-    padding: 200px 452px;
-
-    @media screen and (min-device-pixel-ratio: 2),
+    @media not all,
       screen and (-webkit-min-device-pixel-ratio: 2),
-      screen and (-o-min-device-pixel-ratio: 2/1),
+      not all,
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/new-photo/hero-bg-1600@2x.jpg);
+      background-image: radial-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/new-photo/hero-bg-1600@2x.jpg);
     }
   }
 
@@ -80,5 +87,34 @@
     @include for-size(desktop) {
       @include fonts(44px, 900, 1.61, 0.06em);
     }
+  }
+}
+
+.overlay {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-repeat: no-repeat;
+
+  @include for-size(tablet) {
+    max-width: 768px;
+  }
+
+  @include for-size(desktop) {
+    max-width: 1600px;
+    height: 600px;
+  }
+}
+
+.hero-container {
+  display: inline-block;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 360px;
+  @include for-size(desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 700px;
   }
 }

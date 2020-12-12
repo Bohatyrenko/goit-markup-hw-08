@@ -110,13 +110,12 @@
     <!-- Главный контент -->
     <main>
       <!-- Герой -->
-      <section class="hero">
-        <div class="center">
+      <section class="hero overlay">
+        <div class="hero-container">
           <h1 class="hero-title">
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-
           <button class="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
@@ -230,7 +229,10 @@
               <li class="work-figure">
                 <img
                   src="./images/new-photo/img1.jpg"
-                  srcset="./images/new-photo/img1@2x.jpg 2x"
+                  srcset="
+                    ./images/new-photo/img1.jpg    1x,
+                    ./images/new-photo/img1@2x.jpg 2x
+                  "
                   alt="Lessons 1"
                   width="370"
                 />
@@ -239,7 +241,10 @@
               <li class="work-figure">
                 <img
                   src="./images/new-photo/img2.jpg"
-                  srcset="./images/new-photo/img2@2x.jpg 2x"
+                  srcset="
+                    ./images/new-photo/img2.jpg    1x,
+                    ./images/new-photo/img2@2x.jpg 2x
+                  "
                   alt="Lessons 2"
                   width="370"
                 />
@@ -248,7 +253,10 @@
               <li class="work-figure">
                 <img
                   src="./images/new-photo/img3.jpg"
-                  srcset="./images/new-photo/img3@2x.jpg 2x"
+                  srcset="
+                    ./images/new-photo/img3.jpg    1x,
+                    ./images/new-photo/img3@2x.jpg 2x
+                  "
                   alt="Lessons 3"
                   width="370"
                 />
@@ -267,9 +275,12 @@
             <li class="team-item">
               <img
                 srcset="
-                  ./images/new-photo/stuff1-270.jpg 270w,
-                  ./images/new-photo/stuff1-354.jpg 354w,
-                  ./images/new-photo/stuff1-450.jpg 450w
+                  ./images/new-photo/stuff1-270.jpg    270w,
+                  ./images/new-photo/stuff1-270@2x.jpg 270w,
+                  ./images/new-photo/stuff1-354.jpg    354w,
+                  ./images/new-photo/stuff1-354@2x.jpg 354w,
+                  ./images/new-photo/stuff1-450.jpg    450w,
+                  ./images/new-photo/stuff1-450@2x.jpg 450w
                 "
                 class="team-img"
                 src="./images/new-photo/stuff1-270.jpg"
@@ -320,12 +331,15 @@
             <li class="team-item">
               <img
                 srcset="
-                  ./images/new-photo/stuff2-270.jpg 270w,
-                  ./images/new-photo/stuff2-354.jpg 354w,
-                  ./images/new-photo/stuff2-450.jpg 450w
+                  ./images/new-photo/stuff2-270.jpg    270w,
+                  ./images/new-photo/stuff2-270@2x.jpg 270w,
+                  ./images/new-photo/stuff2-354.jpg    354w,
+                  ./images/new-photo/stuff2-354@2x.jpg 354w,
+                  ./images/new-photo/stuff2-450.jpg    450w,
+                  ./images/new-photo/stuff2-450@2x.jpg 450w
                 "
                 class="team-img"
-                src="./images/new-photo/stuff2-450.jpg"
+                src="./images/new-photo/stuff2-270.jpg"
                 alt="Ольга Репина"
                 sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
               />
@@ -373,12 +387,15 @@
             <li class="team-item">
               <img
                 srcset="
-                  ./images/new-photo/stuff3-270.jpg 270w,
-                  ./images/new-photo/stuff3-354.jpg 354w,
-                  ./images/new-photo/stuff3-450.jpg 450w
+                  ./images/new-photo/stuff3-270.jpg    270w,
+                  ./images/new-photo/stuff3-270@2x.jpg 270w,
+                  ./images/new-photo/stuff3-354.jpg    354w,
+                  ./images/new-photo/stuff3-354@2x.jpg 354w,
+                  ./images/new-photo/stuff3-450.jpg    450w,
+                  ./images/new-photo/stuff3-450@2x.jpg 450w
                 "
                 class="team-img"
-                src="./images/new-photo/stuff3-450.jpg"
+                src="./images/new-photo/stuff3-270.jpg"
                 alt="Николай Тарасов"
                 sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
               />
@@ -426,12 +443,15 @@
             <li class="team-item">
               <img
                 srcset="
-                  ./images/new-photo/stuff4-270.jpg 270w,
-                  ./images/new-photo/stuff4-354.jpg 354w,
-                  ./images/new-photo/stuff4-450.jpg 450w
+                  ./images/new-photo/stuff4-270.jpg    270w,
+                  ./images/new-photo/stuff4-270@2x.jpg 270w,
+                  ./images/new-photo/stuff4-354.jpg    354w,
+                  ./images/new-photo/stuff4-354@2x.jpg 354w,
+                  ./images/new-photo/stuff4-450.jpg    450w,
+                  ./images/new-photo/stuff4-450@2x.jpg 450w
                 "
                 class="team-img"
-                src="./images/new-photo/stuff4-450.jpg"
+                src="./images/new-photo/stuff4-270.jpg"
                 alt="Михаил Ермаков"
                 sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
               />

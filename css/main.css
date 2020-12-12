@@ -162,7 +162,6 @@ input {
   height: 50px;
   border: 1px solid transparent;
   border-radius: 5px;
-  outline: none;
   background-color: #2196f3;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -499,6 +498,7 @@ input {
 @media (min-width: 768px) {
   .subscription-email {
     display: block;
+    width: 450px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1073,14 +1073,13 @@ input {
   height: 400px;
   background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-480.jpg);
   background-size: 480px 400px;
-  padding: 118px 60px;
   margin-right: auto;
   margin-left: auto;
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media not all, screen and (-webkit-min-device-pixel-ratio: 2), not all, screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/new-photo/hero-bg-480@2x.jpg);
+    background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-480@2x.jpg);
   }
 }
 
@@ -1090,13 +1089,12 @@ input {
     height: 400px;
     background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-768.jpg);
     background-size: 768px 400px;
-    padding: 118px 204px;
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/new-photo/hero-bg-768@2x.jpg);
+    background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-768@2x.jpg);
   }
 }
 
@@ -1106,13 +1104,12 @@ input {
     height: 600px;
     background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-1600.jpg);
     background-size: 1600px 600px;
-    padding: 200px 452px;
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/new-photo/hero-bg-1600@2x.jpg);
+    background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-1600@2x.jpg);
   }
 }
 
@@ -1138,6 +1135,42 @@ input {
     font-weight: 900;
     line-height: 1.61;
     letter-spacing: 0.06em;
+  }
+}
+
+.overlay {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    height: 600px;
+  }
+}
+
+.hero-container {
+  display: inline-block;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 360px;
+}
+
+@media (min-width: 1200px) {
+  .hero-container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 700px;
   }
 }
 
@@ -1345,12 +1378,14 @@ input {
 @media (min-width: 768px) {
   .team-item {
     width: calc((100% - 30px) / 2);
+    max-width: 354px;
   }
 }
 
 @media (min-width: 1200px) {
   .team-item {
     width: calc((100% - 90px) / 4);
+    max-width: 270px;
   }
 }
 

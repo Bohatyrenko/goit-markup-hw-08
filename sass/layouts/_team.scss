@@ -50,10 +50,12 @@
 
     @include for-size(tablet) {
       width: calc((100% - 30px) / 2);
+      max-width: 354px;
     }
 
     @include for-size(desktop) {
       width: calc((100% - 90px) / 4);
+      max-width: 270px;
     }
 
     @media screen and (max-width: 767px) {
