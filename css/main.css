@@ -614,7 +614,7 @@ input {
 
 @media (min-width: 1200px) {
   .heder-container {
-    width: 1600px;
+    max-width: 1600px;
   }
 }
 
