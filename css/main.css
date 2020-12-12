@@ -71,7 +71,6 @@ input {
 
 @media (min-width: 1200px) {
   .main-container {
-    width: 1600px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -631,12 +630,6 @@ input {
   }
 }
 
-@media (min-width: 1200px) {
-  .header-horizont {
-    justify-content: space-between;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .header-logo {
     display: flex;
@@ -677,7 +670,7 @@ input {
 @media (min-width: 1200px) {
   .header-list {
     padding: 32px 0px;
-    margin: 0px;
+    margin: 0px 305px 0px 93px;
     justify-content: space-between;
   }
 }
@@ -1511,12 +1504,6 @@ footer {
   background-color: #2f303a;
 }
 
-@media (min-width: 1200px) {
-  footer {
-    width: 1600px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .footer-up {
     display: flex;
@@ -1536,7 +1523,6 @@ footer {
   .footer {
     display: flex;
     text-align: start;
-    width: 1200px;
   }
 }
 

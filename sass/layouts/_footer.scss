@@ -1,16 +1,16 @@
 footer {
   background-color: $second-background-color;
-  
-  @include for-size(desktop) {
-    width: 1600px;
-  }
+
+  // @include for-size(desktop) {
+  //   width: 1600px;
+  // }
 }
 
 .footer-up {
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
-  } 
+  }
 }
 
 .footer {
@@ -25,8 +25,7 @@ footer {
   @include for-size(desktop) {
     display: flex;
     text-align: start;
-    width: 1200px;
-
+    // width: 1200px;
   }
 
   &-title {
@@ -34,7 +33,7 @@ footer {
 
     color: $background-color;
     font-family: $main-font-family;
-    @include fonts (14px, bold, 1.17, 0.03em);
+    @include fonts(14px, bold, 1.17, 0.03em);
     text-transform: uppercase;
   }
 
@@ -50,7 +49,7 @@ footer {
 
   color: $background-color;
   font-family: $main-font-family;
-  @include fonts (14px, normal, 1.71, 0.03em);
+  @include fonts(14px, normal, 1.71, 0.03em);
   font-style: normal;
 
   &-link {
@@ -59,7 +58,7 @@ footer {
 
     color: rgba(255, 255, 255, 0.6);
     font-family: $main-font-family;
-    @include fonts (14px, normal, 1.71, 0.03em);
+    @include fonts(14px, normal, 1.71, 0.03em);
     font-style: normal;
   }
 }
@@ -96,12 +95,12 @@ footer {
   border-radius: 50%;
 
   background-color: rgba(255, 255, 255, 0.1);
-  
-  @include transition (background-color);
+
+  @include transition(background-color);
 }
 
 .bg-social:hover .social-icons-svg,
-.bg-social:focus .social-icons-svg{
+.bg-social:focus .social-icons-svg {
   fill: $background-color;
 }
 
@@ -113,6 +112,6 @@ footer {
 .social-footer-svg {
   width: 20px;
   height: 20px;
-  
+
   fill: $background-color;
 }
