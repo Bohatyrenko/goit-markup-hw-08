@@ -71,6 +71,7 @@ input {
 
 @media (min-width: 1200px) {
   .main-container {
+    width: 1600px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -82,6 +83,8 @@ input {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  align-content: center;
+  vertical-align: baseline;
 }
 
 @media (min-width: 480px) {
@@ -289,7 +292,8 @@ input {
 }
 
 .form-input {
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
   height: 40px;
   padding: 14px 15px 14px 42px;
   border: 1px solid rgba(33, 33, 255, 0.2);
@@ -333,7 +337,8 @@ input {
 }
 
 .form-textarea {
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 255, 0.2);
   border-radius: 4px;
@@ -477,8 +482,11 @@ input {
 }
 
 .subscription-email {
+  display: block;
   height: 50px;
   max-width: 450px;
+  width: 100%;
+  align-items: center;
   padding: 15px 16px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -496,7 +504,8 @@ input {
 @media (min-width: 768px) {
   .subscription-email {
     display: block;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -592,6 +601,8 @@ input {
 .header {
   display: flex;
   align-items: flex-end;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header-line {
@@ -1092,7 +1103,7 @@ input {
 
 @media (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
+    width: 1600px;
     height: 600px;
     background-image: radial-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/new-photo/hero-bg-1600.jpg);
     background-size: 1600px 600px;
@@ -1407,22 +1418,13 @@ input {
   }
 }
 
-.horizont-clients {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
 .clients-item {
-  flex-basis: calc(100% / 2 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  height: 90px;
 }
 
-@media screen and (max-width: 480px) {
+@media (min-width: 480px) {
   .clients-item {
-    justify-content: center;
+    width: calc((100% - 30px) / 2);
   }
 }
 
@@ -1451,7 +1453,8 @@ input {
 }
 
 .clients-link {
-  display: block;
+  display: inline-block;
+  width: 210px;
   height: 90px;
 }
 
@@ -1466,6 +1469,14 @@ input {
   .clients-link {
     width: 170px;
     height: 90px;
+  }
+}
+
+@media (min-width: 480px) {
+  .horizont-clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -1504,6 +1515,12 @@ footer {
   background-color: #2f303a;
 }
 
+@media (min-width: 1200px) {
+  footer {
+    width: 1600px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer-up {
     display: flex;
@@ -1523,7 +1540,9 @@ footer {
   .footer {
     display: flex;
     text-align: start;
-    width: 1200px;
+    width: 1600px;
+    padding-right: 200px;
+    padding-left: 200px;
   }
 }
 

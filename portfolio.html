@@ -12,8 +12,8 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="header-line">
-      <div class="header-container main-container">
+    <header>
+      <div class="header-container main-container ">
         <div class="container header-horizont">
           <div class="header-logo">
             <a class="logo" href="./index.html"
@@ -59,15 +59,13 @@
               <svg class="mail-svg">
                 <use
                   href="./images/icon/icomoon/symbol-defs.svg#icon-mail"
-                ></use></svg
-              >info@devstudio.com</a
+                ></use></svg>info@devstudio.com</a
             >
             <a class="header-link-phone" href="tel:+380961111111">
               <svg class="phone-svg">
                 <use
                   href="./images/icon/icomoon/symbol-defs.svg#icon-phone"
-                ></use></svg
-              >+38 096 111 11 11
+                ></use></svg>+38 096 111 11 11
             </a>
           </address>
         </div>
@@ -90,8 +88,7 @@
               <svg class="mail-svg">
                 <use
                   href="./images/icon/icomoon/symbol-defs.svg#icon-mail"
-                ></use></svg
-              >info@devstudio.com</a
+                ></use></svg>info@devstudio.com</a
             >
           </li>
           <li>
@@ -99,8 +96,7 @@
               <svg class="phone-svg">
                 <use
                   href=".../images/icon/icomoon/symbol-defs.svg#icon-phone"
-                ></use></svg
-              >+38 096 111 11 11
+                ></use></svg>+38 096 111 11 11
             </a>
           </li>
         </ul>
@@ -109,8 +105,8 @@
 
     <!-- Главный контент -->
     <main>
-      <div class="portfolio-container">
-        <section class="portfolio-padding">
+      <section class="portfolio-container">
+        <div class="portfolio-padding">
           <div class="portfolio-container">
             <h1 class="visually-hidden">Портфолио</h1>
             <ul class="filter">
@@ -131,6 +127,20 @@
               </li>
             </ul>
             <ul class="portfolio">
+
+
+
+              <!-- <picture>
+                <source srcset="./images/comand/desktop/igor-270.jpg 1x, ./images/comand/desktop/igor-270-2x.jpg 2x" 
+                  media="(min-width: 1200px)" />
+                <source srcset="./images/comand/tablet/igor-354.jpg 1x, ./images/comand/tablet/igor-354-2x.jpg 2x" 
+                  media="(min-width: 768px)" />
+                <source srcset="./images/comand/mob/igor-480.jpg 1x, ./images/comand/mob/igor-480-2x.jpg 2x" 
+                  media="(min-width: 480px)" />
+                <img src="./images/comand/mob/igor-480.jpg" alt="Фото Игоря Демьяненко" width="450">
+              </picture>
+ -->
+
               <li class="portfolio-item portfolio-bottom">
                 <a class="portfolio-link shadow" href="">
                   <div class="portfolio-div-overlap">
@@ -146,6 +156,7 @@
                       src="./images/new-photo/photo1-354.jpg"
                       alt="Технокряк"
                       sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
+                      width="450"
                     />
                     <p class="portfolio-overlap">
                       Технокряк это современная площадка распостранения
@@ -396,13 +407,13 @@
               </li>
             </ul>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <!-- Футер в portfolio -->
     <footer>
-      <div class="footer">
+      <div class="main-container footer">
         <div class="footer-up">
           <section class="footer-info">
             <a class="logo footer-logo" href="./index.html"

@@ -75,7 +75,7 @@ input {
 
 .main-container {
   @include for-size(desktop) {
-    // width: 1600px;
+    width: 1600px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -89,8 +89,8 @@ input {
   margin-right: auto;
   margin-left: auto;
 
-  // align-content: center;
-  // vertical-align: baseline;
+  align-content: center;
+  vertical-align: baseline;
 
   @include for-size(mobile) {
     width: 480px;
