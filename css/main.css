@@ -1655,9 +1655,18 @@ footer {
 
 /* Main */
 .portfolio-padding {
-  width: 480px;
-  padding: 60px 15px 30px 15px;
-  align-items: center;
+  width: 100%;
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  align-content: center;
+  vertical-align: baseline;
+}
+
+@media (min-width: 480px) {
+  .portfolio-padding {
+    width: 480px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1669,14 +1678,34 @@ footer {
 @media (min-width: 1200px) {
   .portfolio-padding {
     width: 1200px;
-    margin-left: 200px;
   }
 }
 
 .portfolio-container {
   width: 100%;
+  padding: 60px 0px;
   margin-right: auto;
   margin-left: auto;
+  align-content: center;
+  vertical-align: baseline;
+}
+
+@media (min-width: 480px) {
+  .portfolio-container {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-container {
+    width: 1200px;
+  }
 }
 
 .button-filter {

@@ -5,9 +5,18 @@
 /* Main */
 
 .portfolio-padding {
-  width: 480px;
-  padding: 60px 15px 30px 15px;
-  align-items: center;
+  width: 100%;
+
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  align-content: center;
+  vertical-align: baseline;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
 
   @include for-size(tablet) {
     width: 768px;
@@ -15,14 +24,33 @@
 
   @include for-size(desktop) {
     width: 1200px;
-    margin-left: 200px;
   }
 }
 
 .portfolio-container {
   width: 100%;
+
+  padding: 60px 0px;
   margin-right: auto;
   margin-left: auto;
+
+  align-content: center;
+  vertical-align: baseline;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+  // width: 100%;
+  // margin-right: auto;
+  // margin-left: auto;
 }
 .button-filter {
   display: inline-block;
@@ -108,11 +136,6 @@
     @include for-size(desktop) {
       width: calc(100% / 3 - 30px);
     }
-
-
-
-
-
 
     // @include for-size(tablet) {
     //   width: calc((100% - 30px) / 2);
