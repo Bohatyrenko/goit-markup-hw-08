@@ -34,8 +34,24 @@ body {
 //   padding: 25px 0px 0px 0px;
 // }
 
+header {
+  @media screen and(min-width: 1200px) {
+    width: 1600px;
+  }
+}
+
+main {
+  @media screen and(min-width: 1200px) {
+    width: 1600px;
+  }
+}
+
 footer {
   background-color: $second-background-color;
+  
+  @media screen and(min-width: 1200px) {
+    width: 1600px;
+  }
 }
 
 a {
@@ -75,7 +91,7 @@ input {
 
 .main-container {
   @include for-size(desktop) {
-    width: 1600px;
+    width: 1200px;
     margin-right: auto;
     margin-left: auto;
   }

@@ -30,8 +30,26 @@ body {
   margin: 0px;
 }
 
+@media screen and (min-width: 1200px) {
+  header {
+    width: 1600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    width: 1600px;
+  }
+}
+
 footer {
   background-color: #2f303a;
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    width: 1600px;
+  }
 }
 
 a {
@@ -71,7 +89,7 @@ input {
 
 @media (min-width: 1200px) {
   .main-container {
-    width: 1600px;
+    width: 1200px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1556,9 +1574,7 @@ footer {
   .footer {
     display: flex;
     text-align: start;
-    width: 1600px;
-    padding-right: 215px;
-    padding-left: 215px;
+    width: 1200px;
   }
 }
 
