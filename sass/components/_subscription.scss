@@ -3,11 +3,14 @@
   margin-left: auto;
 
   &-email {
+    display: block;
     height: 50px;
     max-width: 450px;
+    // width: 100%;
+    align-items: center;
 
     padding: 15px 16px;
-    margin-bottom: 20px;
+    margin: 0px auto 20px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -18,9 +21,18 @@
     font-family: $main-font-family;
     @include fonts(16px, normal, 1.25, 0.03em);
 
+    @media screen and (max-width: 479px) {
+      width:100%; 
+    }
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      width:450px; 
+    } 
+     
     @include for-size(tablet) {
       display: block;
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
+
       margin-right: auto;
       margin-left: auto;
     }
