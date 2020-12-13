@@ -89,8 +89,8 @@ input {
   margin-right: auto;
   margin-left: auto;
 
-  align-content: center;
-  vertical-align: baseline;
+  // align-content: center;
+  // vertical-align: baseline;
 
   @include for-size(mobile) {
     width: 480px;
