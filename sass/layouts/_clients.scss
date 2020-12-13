@@ -11,60 +11,57 @@
   @include for-size(desktop) {
     width: 1200px;
   }
+
+  &-item {
+    height: 90px;
+
+    @include for-size(mobile) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(tablet) {
+      width: calc((100% - 60px) / 3);
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 150px) / 6);
+    }
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  
+    @media screen and (max-width: 1199px) {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    width: 210px;
+    height: 90px;
+
+    @include for-size(tablet) {
+      width: 226px;
+      height: 90px;
+    }
+  
+    @include for-size(desktop) {
+      width: 170px;
+      height: 90px;
+    }
+  }
 }
 
 .horizont-clients {
-  // @media screen and(max-width: 480px) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-  // justify-content: space-between;
-  // }
-}
-.clients-item {
-  flex-basis: calc(100% / 2 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
-
-  @media screen and(max-width: 480px) {
-    justify-content: center;
-  }
-
-  @include for-size(tablet) {
-    width: calc((100% - 60px) / 3);
-  }
-
-  @include for-size(desktop) {
-    width: calc((100% - 150px) / 6);
-  }
-
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media screen and (max-width: 1199px) {
-    &:first-child {
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.clients-link {
-  display: block;
-  // width: 210px;
-  height: 90px;
-
-  @include for-size(tablet) {
-    width: 226px;
-    height: 90px;
-  }
-
-  @include for-size(desktop) {
-    width: 170px;
-    height: 90px;
+  @include for-size(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -74,10 +71,10 @@
 
   border: 1px solid $svg-color;
   border-radius: 4px;
-
+  
   fill: $svg-color;
 
-  @include transition(fill);
+  @include transition (fill);
 
   @include for-size(tablet) {
     width: 226px;
@@ -90,7 +87,7 @@
   }
 }
 
-.clients-link:hover .clients-icons-svg,
+.clients-link:hover .clients-icons-svg, 
 .clients-link:focus .clients-icons-svg {
   fill: $nav-button-color;
   border-color: $nav-button-color;

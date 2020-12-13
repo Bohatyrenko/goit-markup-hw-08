@@ -1,6 +1,9 @@
 .header {
   display: flex;
   align-items: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+
 
   &-line {
     border-bottom: 1px solid #ececec;

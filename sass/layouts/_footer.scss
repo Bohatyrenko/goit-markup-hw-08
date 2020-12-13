@@ -1,9 +1,9 @@
 footer {
   background-color: $second-background-color;
 
-  // @include for-size(desktop) {
-  //   width: 1600px;
-  // }
+  @include for-size(desktop) {
+    width: 1600px;
+  }
 }
 
 .footer-up {
@@ -25,7 +25,9 @@ footer {
   @include for-size(desktop) {
     display: flex;
     text-align: start;
-    width: 1200px;
+    width: 1600px;
+    padding-right: 200px;
+    padding-left: 200px;
   }
 
   &-title {
