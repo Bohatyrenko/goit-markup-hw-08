@@ -1229,6 +1229,12 @@ input {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .features-title {
+    text-align: center;
+  }
+}
+
 .features-description {
   margin-bottom: 0;
   color: #757575;
@@ -1344,6 +1350,10 @@ input {
   text-transform: uppercase;
 }
 
+.team-color {
+  background-color: #f5f4fa;
+}
+
 .team {
   width: 100%;
   padding: 60px 15px 30px 15px;
@@ -1442,37 +1452,26 @@ input {
 }
 
 .clients-item {
-  height: 90px;
-  max-width: calc((100% - 30px) / 2);
+  margin-top: 30px;
+  margin-left: 30px;
+  width: calc(100% / 2 - 30px);
 }
 
 @media (min-width: 768px) {
   .clients-item {
-    width: calc((100% - 60px) / 3);
+    width: calc(100% / 3 - 30px);
   }
 }
 
 @media (min-width: 1200px) {
   .clients-item {
-    width: calc((100% - 150px) / 6);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .clients-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .clients-item:first-child {
-    margin-bottom: 30px;
+    width: calc(100% / 6 - 30px);
   }
 }
 
 .clients-link {
   display: inline-block;
-  width: 210px;
+  width: 100%;
   height: 90px;
 }
 
@@ -1490,16 +1489,15 @@ input {
   }
 }
 
-@media (min-width: 480px) {
-  .horizont-clients {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.horizont-clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .clients-icons-svg {
-  width: 210px;
+  width: 100%;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;

@@ -30,6 +30,10 @@
     color: $main-text-color;
     @include fonts (14px, bold, 1.14, 0.03em);
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &-description {
