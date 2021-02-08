@@ -25,14 +25,6 @@
     margin-left: 30px;
     width: calc(100% / 2 - 30px);
 
-    // height: 90px;
-    // max-width: 210px;
-    // max-width: calc((100% - 30px) / 2);
-
-    // @include for-size(mobile) {
-    //   width: calc((100% - 30px) / 2);
-    // }
-
     @include for-size(tablet) {
       width: calc(100% / 3 - 30px);
     }
@@ -40,18 +32,6 @@
     @include for-size(desktop) {
       width: calc(100% / 6 - 30px);
     }
-
-    // @media screen and (max-width: 767px) {
-    //   &:not(:last-child) {
-    //     margin-bottom: 30px;
-    //   }
-    // }
-  
-    // @media screen and (max-width: 1199px) {
-    //   &:first-child {
-    //     margin-bottom: 30px;
-    //   }
-    // }
   }
 
   &-link {
@@ -63,7 +43,7 @@
       width: 226px;
       height: 90px;
     }
-  
+
     @include for-size(desktop) {
       width: 170px;
       height: 90px;
@@ -77,12 +57,6 @@
   margin-top: -30px;
   margin-left: -30px;
   margin-right: 30px;
-
-  // @include for-size(mobile) {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  // }
 }
 
 .clients-icons-svg {
@@ -91,10 +65,10 @@
 
   border: 1px solid $svg-color;
   border-radius: 4px;
-  
+
   fill: $svg-color;
 
-  @include transition (fill);
+  @include transition(fill);
 
   @include for-size(tablet) {
     width: 226px;
@@ -107,7 +81,7 @@
   }
 }
 
-.clients-link:hover .clients-icons-svg, 
+.clients-link:hover .clients-icons-svg,
 .clients-link:focus .clients-icons-svg {
   fill: $nav-button-color;
   border-color: $nav-button-color;
