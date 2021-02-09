@@ -1,16 +1,14 @@
 .hero {
   max-width: 480px;
   height: 400px;
+  background-size: 480px 400px;
+  margin-right: auto;
+  margin-left: auto;
   background-image: radial-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/new-photo/hero-bg-480.jpg);
-
-  background-size: 480px 400px;
-
-  margin-right: auto;
-  margin-left: auto;
 
   @media not all,
     screen and (-webkit-min-device-pixel-ratio: 2),
@@ -50,12 +48,12 @@
   @include for-size(desktop) {
     width: 1600px;
     height: 600px;
+    background-size: 1600px 600px;
     background-image: radial-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/new-photo/hero-bg-1600.jpg);
-    background-size: 1600px 600px;
 
     @media not all,
       screen and (-webkit-min-device-pixel-ratio: 2),
